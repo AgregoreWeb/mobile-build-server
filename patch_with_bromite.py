@@ -43,12 +43,13 @@ build_name = args.build_name
 build_path = "out/" + build_name
 
 bromite_build_folder = os.path.join(bromite, 'build')
-# Checkout version from RELEASE (or RELEASE_COMMIT?), with `--hard`
+# Checkout version from RELEASE (or RELEASE_COMMIT?)
+# TODO: git reset --hard?
 release_file_name = os.path.join(bromite_build_folder, 'RELEASE')
 
 with open(release_file_name, 'r', encoding='utf8') as release_file:
     checkout_value = release_file.read()
-    to_exec = "git checkout --hard " + checkout_value
+    to_exec = f"git checkout {checkout_value}"
     subprocess.run(to_exec, cwd=chromium, shell=True, check=True)
 
 # Copy build/bromite.gn_args to out/Default/args.gn (configurable?) (check if exists?)
