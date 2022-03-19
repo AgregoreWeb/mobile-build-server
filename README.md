@@ -19,3 +19,11 @@ Builder server for Agregore Mobile (Chromium Android)
 - Use token authentication in the querystring
 - Queue up requests
 
+## Setup
+
+Configure `git` with your username and email so that patches may be applied.
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
