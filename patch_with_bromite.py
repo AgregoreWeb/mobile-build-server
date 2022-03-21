@@ -47,7 +47,7 @@ bromite_build_folder = os.path.join(bromite, 'build')
 # Checkout version from RELEASE (or RELEASE_COMMIT?)
 # TODO: git reset --hard?
 print("Checkout chromium version")
-release_file_name = os.path.join(bromite_build_folder, 'RELEASE')
+release_file_name = os.path.join(bromite_build_folder, 'RELEASE_COMMIT')
 
 with open(release_file_name, 'r', encoding='utf8') as release_file:
     checkout_value = release_file.read()
